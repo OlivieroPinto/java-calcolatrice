@@ -36,17 +36,18 @@ public class CalcoliHelper {
 	}
 
 	public static double calcoloPotenza(double numero1, double numero2) {
+		double risultato = 1;
 		if (numero1 == 0 || numero2 == 0)
 			return 1;
 		else if (numero2 < 0) {
 			for (int n = 2; n <= -numero2; n++) {
-				numero1 *= numero1;
+				risultato *= numero1;
 			}
-			return 1 / numero1;
+			return 1 / risultato;
 		} else
-			for (int n = 2; n <= numero2; n++) {
-				numero1 *= numero1;
+			for (int n = 0; n < numero2; n++) {
+				risultato *= numero1;
 			}
-		return numero1;
+		return risultato;
 	}
 }
